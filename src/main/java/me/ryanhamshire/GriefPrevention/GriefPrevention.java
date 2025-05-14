@@ -3079,7 +3079,7 @@ public class GriefPrevention extends JavaPlugin
         Location spawn = world.getSpawnLocation();
         int radius = Bukkit.getServer().getSpawnRadius();
         if (radius == 0) return null;
-        org.bukkit.util.Vector vector = new org.bukkit.util.Vector(16 * radius,0,16 * radius);
+        org.bukkit.util.Vector vector = new org.bukkit.util.Vector(radius, 0, radius);
         Location lower = spawn.subtract(vector);
         Location greater = spawn.add(vector);
         return new BoundingBox(lower, greater);
