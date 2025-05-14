@@ -2446,7 +2446,7 @@ public class GriefPrevention extends JavaPlugin
             //if the area is spawn protected, warn the player about it
             BoundingBox claimBox = new BoundingBox(claim);
             BoundingBox spawnProtection = getSpawnProtection(claim.getGreaterBoundaryCorner().getWorld());
-            if (spawnProtection != null && claimBox.contains2d(spawnProtection) && player.isOp()) {
+            if (spawnProtection != null && claimBox.intersects(spawnProtection) && player.isOp()) {
                 GriefPrevention.sendMessage(player, TextMode.Warn, Messages.ClaimOverlapsSpawnProtection);
             }
 
